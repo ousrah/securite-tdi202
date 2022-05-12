@@ -66,7 +66,7 @@ namespace WebApplication12
               
 
                 MailMessage mail = new MailMessage();
-                mail.From = new MailAddress("tdi2022@outlook.fr");
+                mail.From = new MailAddress("ismotdi202@outlook.com");
                 mail.Subject = "inscription ismo tétouan";
                 mail.Body = "votre inscription à <b> ismo.ma</b> à été effectuée avec succés, cliquez sur le lien suivant pour valider votre inscription <br /><br /><a href = 'https://localhost:44362/validationInscription.aspx?email=" + txtEmail.Text + "&hash="+hash+"' > https://localhost:44362/validationInscription.aspx?email=" + txtEmail.Text + "&hash=" + hash + "</ a > ";
 
@@ -76,12 +76,12 @@ namespace WebApplication12
 
                 mail.To.Add(txtEmail.Text);
 
-                SmtpClient smtp = new SmtpClient("smtp.live.com", 64);
+                SmtpClient smtp = new SmtpClient("smtp.outlook.com", 587);
 
-             //   smtp.EnableSsl = true;
+              smtp.EnableSsl = true;
                 smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtp.UseDefaultCredentials = false;
-                smtp.Credentials = new NetworkCredential("tdi2022@outlook.fr", "ISMO@2022");
+                smtp.Credentials = new NetworkCredential("ismotdi202@outlook.com", "ISMO@2022");
 
                 try
                 {
