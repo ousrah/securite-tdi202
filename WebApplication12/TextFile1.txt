@@ -1,0 +1,7 @@
+﻿1 - validation d'inscription par email et hash
+2 - utilisation des mot de passes hashés au niveau de la bd
+3 - système de recupération de mot de passe (mot de passe oublié)
+4 - ajouter une solution pour garder la session ouverte meme si on eteind le PC
+5 - Afficher sur l'entete de la page le nom du l'utilisateur en cours.
+6 - Afficher sur le pied de la page les nombre des visiteurs en cours 
+                              ainsi que le nombres des visites du site web
