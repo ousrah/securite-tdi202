@@ -24,6 +24,16 @@ namespace WebApplication12
         protected void LinkButton2_Click(object sender, EventArgs e)
         {
             Session["passport"] = "";
+            HttpCookie c = new HttpCookie("ismo");
+            if (c != null)
+            {
+                c["a"] = "";
+                c["b"] = "";
+                c["c"] = "";
+                c["d"] = "";
+                c.Expires = DateTime.Now.AddDays(-1);
+                Response.Cookies.Add(c);
+            }
             Response.Redirect("login.aspx");
         }
     }

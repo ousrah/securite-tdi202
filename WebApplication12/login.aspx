@@ -19,7 +19,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div id="cadre">
+        <br />
+        <br />
+         <div id="cadre">
 
             <table style="width:100%;">
                 <tr>
@@ -64,6 +66,11 @@
                     <td>&nbsp;</td>
                     <td>
                         <asp:Button ID="btnConnection" runat="server" OnClick="btnConnection_Click" Text="Connexion" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <asp:CheckBox ID="chksession" runat="server" Text="Garder ma session ouverte" />
                     </td>
                 </tr>
             </table>
