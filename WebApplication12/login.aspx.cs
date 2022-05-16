@@ -148,6 +148,17 @@ namespace WebApplication12
                 return "";
             }
         }
-        
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+        /*  foreach(string a in Request.ServerVariables)
+                        {
+                            Response.Write(a + " --> " + Request.ServerVariables[a] + "<br>");
+
+                        }
+        */
+            Response.Write(Request.ServerVariables["REMOTE_ADDR"]);
+            Response.Write(Request.UserHostAddress);
+        }
     }
 }
