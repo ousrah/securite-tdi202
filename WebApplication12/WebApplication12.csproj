@@ -137,6 +137,9 @@
     <Content Include="Connected Services\ServiceReference1\WebApplication12.ServiceReference1.HelloWorldResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ServiceReference1\WebApplication12.ServiceReference1.GetPriceByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="inscription.aspx" />
     <Content Include="Inscriptioneffectuee.aspx" />

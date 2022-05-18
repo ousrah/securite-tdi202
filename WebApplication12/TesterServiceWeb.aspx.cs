@@ -24,5 +24,11 @@ namespace WebApplication12
          
             Label1.Text = s.HelloWorld(l);
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            ServiceReference1.StockSoapClient s = new ServiceReference1.StockSoapClient();
+            Label2.Text = s.GetPriceById(TextBox1.Text);
+        }
     }
 }

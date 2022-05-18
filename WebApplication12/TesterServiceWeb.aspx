@@ -23,6 +23,15 @@
             <br />
             <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
         </div>
+        <p>
+            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        </p>
+        <p>
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Tester Get Price By ID" />
+        </p>
+        <p>
+            <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+        </p>
     </form>
 </body>
 </html>

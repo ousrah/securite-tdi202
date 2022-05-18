@@ -15,12 +15,87 @@ namespace WebApplication12.ServiceReference1 {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.StockSoap")]
     public interface StockSoap {
         
+        // CODEGEN : La génération du contrat de message depuis le nom d'élément id de l'espace de noms http://tempuri.org/ n'est pas marqué nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetPriceById", ReplyAction="*")]
+        WebApplication12.ServiceReference1.GetPriceByIdResponse GetPriceById(WebApplication12.ServiceReference1.GetPriceByIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetPriceById", ReplyAction="*")]
+        System.Threading.Tasks.Task<WebApplication12.ServiceReference1.GetPriceByIdResponse> GetPriceByIdAsync(WebApplication12.ServiceReference1.GetPriceByIdRequest request);
+        
         // CODEGEN : La génération du contrat de message depuis le nom d'élément lang de l'espace de noms http://tempuri.org/ n'est pas marqué nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/HelloWorld", ReplyAction="*")]
         WebApplication12.ServiceReference1.HelloWorldResponse HelloWorld(WebApplication12.ServiceReference1.HelloWorldRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/HelloWorld", ReplyAction="*")]
         System.Threading.Tasks.Task<WebApplication12.ServiceReference1.HelloWorldResponse> HelloWorldAsync(WebApplication12.ServiceReference1.HelloWorldRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetPriceByIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetPriceById", Namespace="http://tempuri.org/", Order=0)]
+        public WebApplication12.ServiceReference1.GetPriceByIdRequestBody Body;
+        
+        public GetPriceByIdRequest() {
+        }
+        
+        public GetPriceByIdRequest(WebApplication12.ServiceReference1.GetPriceByIdRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetPriceByIdRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string id;
+        
+        public GetPriceByIdRequestBody() {
+        }
+        
+        public GetPriceByIdRequestBody(string id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetPriceByIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetPriceByIdResponse", Namespace="http://tempuri.org/", Order=0)]
+        public WebApplication12.ServiceReference1.GetPriceByIdResponseBody Body;
+        
+        public GetPriceByIdResponse() {
+        }
+        
+        public GetPriceByIdResponse(WebApplication12.ServiceReference1.GetPriceByIdResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetPriceByIdResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string GetPriceByIdResult;
+        
+        public GetPriceByIdResponseBody() {
+        }
+        
+        public GetPriceByIdResponseBody(string GetPriceByIdResult) {
+            this.GetPriceByIdResult = GetPriceByIdResult;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -116,6 +191,31 @@ namespace WebApplication12.ServiceReference1 {
         
         public StockSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebApplication12.ServiceReference1.GetPriceByIdResponse WebApplication12.ServiceReference1.StockSoap.GetPriceById(WebApplication12.ServiceReference1.GetPriceByIdRequest request) {
+            return base.Channel.GetPriceById(request);
+        }
+        
+        public string GetPriceById(string id) {
+            WebApplication12.ServiceReference1.GetPriceByIdRequest inValue = new WebApplication12.ServiceReference1.GetPriceByIdRequest();
+            inValue.Body = new WebApplication12.ServiceReference1.GetPriceByIdRequestBody();
+            inValue.Body.id = id;
+            WebApplication12.ServiceReference1.GetPriceByIdResponse retVal = ((WebApplication12.ServiceReference1.StockSoap)(this)).GetPriceById(inValue);
+            return retVal.Body.GetPriceByIdResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebApplication12.ServiceReference1.GetPriceByIdResponse> WebApplication12.ServiceReference1.StockSoap.GetPriceByIdAsync(WebApplication12.ServiceReference1.GetPriceByIdRequest request) {
+            return base.Channel.GetPriceByIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebApplication12.ServiceReference1.GetPriceByIdResponse> GetPriceByIdAsync(string id) {
+            WebApplication12.ServiceReference1.GetPriceByIdRequest inValue = new WebApplication12.ServiceReference1.GetPriceByIdRequest();
+            inValue.Body = new WebApplication12.ServiceReference1.GetPriceByIdRequestBody();
+            inValue.Body.id = id;
+            return ((WebApplication12.ServiceReference1.StockSoap)(this)).GetPriceByIdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
