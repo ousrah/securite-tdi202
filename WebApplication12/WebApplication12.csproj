@@ -50,6 +50,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -106,6 +108,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <None Include="Connected Services\ServiceReference1\Stock.disco" />
+    <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -124,6 +133,10 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Connected Services\ServiceReference1\Stock.wsdl" />
+    <Content Include="Connected Services\ServiceReference1\WebApplication12.ServiceReference1.HelloWorldResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="inscription.aspx" />
     <Content Include="Inscriptioneffectuee.aspx" />
@@ -156,9 +169,11 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="server_variables.aspx" />
     <Content Include="Site.Master" />
     <Content Include="testApplication.aspx" />
     <Content Include="testCookies.aspx" />
+    <Content Include="TesterServiceWeb.aspx" />
     <Content Include="TestSession.aspx" />
     <Content Include="TextFile1.txt" />
     <Content Include="validationInscription.aspx" />
@@ -177,6 +192,11 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Connected Services\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -217,6 +237,13 @@
     </Compile>
     <Compile Include="myLib.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="server_variables.aspx.cs">
+      <DependentUpon>server_variables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="server_variables.aspx.designer.cs">
+      <DependentUpon>server_variables.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -244,6 +271,13 @@
     </Compile>
     <Compile Include="testCookies.aspx.designer.cs">
       <DependentUpon>testCookies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TesterServiceWeb.aspx.cs">
+      <DependentUpon>TesterServiceWeb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TesterServiceWeb.aspx.designer.cs">
+      <DependentUpon>TesterServiceWeb.aspx</DependentUpon>
     </Compile>
     <Compile Include="TestSession.aspx.cs">
       <DependentUpon>TestSession.aspx</DependentUpon>
@@ -280,6 +314,12 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

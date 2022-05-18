@@ -67,6 +67,15 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
+       <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-188428055-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-188428055-1');
+</script>        
                 <p>&copy; <%: DateTime.Now.Year %> - Mon ASP.NET Application</p>
              </footer>
         </div>

@@ -78,6 +78,9 @@
             <asp:Label ID="lblErrConnection" runat="server" ForeColor="#FF3300" Text="Login ou mot de passe incorrect" Visible="False"></asp:Label>
 
         </div>
+        <p>
+            &nbsp;</p>
+        <br />
     </form>
 </body>
 </html>
