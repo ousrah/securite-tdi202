@@ -30,5 +30,21 @@ namespace WebApplication12
             ServiceReference1.StockSoapClient s = new ServiceReference1.StockSoapClient();
             Label2.Text = s.GetPriceById(TextBox1.Text);
         }
+     
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Write("test");
+        }
+
+        protected void Button3_Click1(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button3_Click2(object sender, EventArgs e)
+        {
+
+        }
     }
 }

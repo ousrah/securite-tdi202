@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TesterServiceWeb.aspx.cs" Inherits="WebApplication12.TesterServiceWeb" %>
 
+<%@ Register assembly="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" namespace="CrystalDecisions.Web" tagprefix="CR" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -32,6 +34,19 @@
         <p>
             <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
         </p>
-    </form>
+        <p>
+            &nbsp;</p>
+        <asp:Button ID="Button3" runat="server" Text="Button asp coté client" onClientClick="test()" OnClick="Button3_Click2"   />
+        <input id="Button4" type="button" value="button input cote serveur " runat="server"  onserverclick="Button3_Click" /></p>
+   </form>
+    <p>
+    <script>
+        function test()
+        {
+            alert("ok");
+        }
+
+    </script>
+
 </body>
 </html>
